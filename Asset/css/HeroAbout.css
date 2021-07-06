@@ -1,0 +1,24 @@
+.hero-about{
+    background-image: url('../img/1.jpg');
+    background-size:100% 400px; ;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    width:100%
+}
+.hero-about span{
+    color:white
+}
+.hero-about a{
+    color:rgb(182, 115, 115);
+    padding:20px ;
+
+}
+.hero-about a:hover{
+    color: lightsalmon;
+    
+}
+.hero-about h2{
+    color:rgb(202, 152, 152);
+    padding:20px ;
+}

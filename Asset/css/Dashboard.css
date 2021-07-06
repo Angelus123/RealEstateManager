@@ -1,0 +1,43 @@
+.dash-left-container{
+    position:fixed;
+    width: 310px;
+    height: 90vh;
+    float:left;
+    overflow: scroll;
+    overflow-y: hidden;
+    cursor: pointer;
+    background-color: rgb(211, 219, 250);
+    z-index: 1;
+ 
+}
+.dash-left-item{
+    width: 250px;
+    height: 60px;
+    padding: 10px;
+    margin: 10px auto;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px dotted rgba(18, 27, 18, 0.397);
+    background-color: rgb(107, 103, 110);
+}
+.dash-left-item:hover{
+    color: rgb(37, 5, 5);
+    border-bottom: 2px dotted rgba(138, 119, 111, 0.397);
+    background-color: rgb(187, 181, 192);
+}
+
+.dash-content{
+    margin-top: 40px;
+    margin-left: 300px;
+
+}
+.dash-izere{
+    background-image: url('../img/service-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.dash-container h1{
+    text-align: center;
+    color:white;
+    font-size: 36px;
+
+}

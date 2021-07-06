@@ -1,0 +1,26 @@
+
+
+.hero-pic--1{
+    background-image: url('../img/about.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width:100%
+   
+}
+.hero-pic--3{
+    background-image: url('../img/img1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width:100%
+}
+
+.hero-pic--2{
+    background-image: url('../img/1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width:100%
+   
+}
