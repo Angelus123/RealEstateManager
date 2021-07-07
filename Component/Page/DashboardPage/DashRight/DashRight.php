@@ -12,9 +12,3 @@ const DashRight= () => (
 )
 </script>
 
-git init
-git add .
-git commit -m "first commit"
-git branch -M Developer
-git remote add origin https://github.com/Angelus123/RealEstateManager.git
-git push -u origin Developer
