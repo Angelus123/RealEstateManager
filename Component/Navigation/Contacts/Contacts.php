@@ -1,6 +1,11 @@
 <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
 <script  type="text/babel">
-const Contacts = () => (
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
+const Contacts = () =>{
+	const myRef = React.useRef(null)
+  const executeScroll = () => scrollToRef(myRef)
+	return(
+
     <div className='Contacts'>
     <header class="header-section">
 		<div class="header-top">
@@ -11,7 +16,7 @@ const Contacts = () => (
                
 					<div class="col-lg-12 text-lg-right header-top-right">
                     <div class="top-social">
-							<Link to="/dashboard">Dashboard</Link>
+							<Link to="/dashboard"><h3>Dashboard</h3></Link>
 							<a href="#"> <i>Language</i></a>
 							<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
 							<a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
@@ -23,6 +28,10 @@ const Contacts = () => (
 							<li><Link to="/about">ABOUT US</Link></li>
 							<li><Link to="/contact">CONTACT US</Link></li>
 							<li><Link to="/library">LIBRARY</Link></li>
+							<div ref={myRef}></div> 
+							<button className="auto-scroll-top" onClick={executeScroll}>
+								Top
+							</button> 
 						</ul>
 					</div>
 				</div>
@@ -68,35 +77,12 @@ const Contacts = () => (
 		
 			
 			
-            <a href="#" class="site-logo"> <img src='https://github.com/Angelus123/Abgroup/blob/main/img/logo1.png' alt=""/></a>			
+            <a href="#" class="site-ads"> <img src='/Asset/gallery/2.jpg' alt=""/></a>			
 		</div>
+
+		
 	</header>
      
 </div>
-)
+)}
 </script>
-<?php print_r($_POST); 
-				if(isset($_GET['keywords'])) {
-				$keywords = $db->escape_string($_GET['keywords']);
-
-				$query = $db->query("SELECT title, description, price FROM products WHERE '%{$keywords}%' LIKE '%{$keywords}%' ");
-				}
-
-				?>
-
-<!-- <div  className="adv-nav-search">
-				<form adv-nav-search method="post" action="test1.php">
-					<select name="keywords" >
-					<option value="title">Category</option>
-					<option value="description">description</option>
-					<option value="description">Location</option>
-					<option value="description">Size</option>
-					<option value="description">Bedroom</option>
-					<option value="description">Commercial</option>
-					<option value="description">Residantial</option>
-					<option value="description">Offoces</option>
-					<option value="price">price</option>
-					</select>
-					<input type="submit" />
-				</form>
-			</div> -->

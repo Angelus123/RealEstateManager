@@ -56,21 +56,63 @@
                     
                   
                     <div className="how-to-proceed-content-elig" >
-                        <h1>Manage Product</h1>
-                        Our Center assesses  your personal situationfree of charge using our 
-                        digital-automated assessment instrument.
-                        To check is you are eligible on one of our programms. 
-                        <div className="get-content-elig">Check your elegibility </div>
+                       
+                        <div class="col-lg-6">
+                            <div class="contact-right">
+                            <h1>Manage Product</h1>
+                                <div class="section-title">
+                                    <h3>ADD NEW PRODUCT</h3>
+                                   
+                                </div>
+                                <form class="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" placeholder="Enter Title" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" placeholder="Short Description" />
+                                        </div>
+                                        <div class="col-md-12">
+                                            <textarea  placeholder="Enter Full Description"></textarea>
+                                            <button class="site-btn">SUBMIT NOW</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <button class="site-btn">Manage Product In Database </button>
+                            </div>  
+                        </div>  
+                        
                     </div>
                    :null }
 
                    {this.state.manageServices?
                     <div className="how-to-proceed-content-elig" >
-                        <h1>Manage Services</h1>
-                        Our Center assesses  your personal situationfree of charge using our 
-                        digital-automated assessment instrument.
-                        To check is you are eligible on one of our programms. 
-                        <div className="get-content-elig">Check your elegibility </div>
+                       
+                        <div class="col-lg-6">
+                            <div class="contact-right">
+                            <h1>Manage Services</h1>
+                                <div class="section-title">
+                                    <h3>ADD NEW SERVICES</h3>
+                                   
+                                </div>
+                                <form class="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" placeholder="Enter Title" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" placeholder="Short Description" />
+                                        </div>
+                                        <div class="col-md-12">
+                                            <textarea  placeholder="Enter Full Description"></textarea>
+                                            <button class="site-btn">SUBMIT NOW</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <button>Manage Services in Database </button>
+                            </div>  
+                        </div>  
+                     
                     </div>
                    :null }
 

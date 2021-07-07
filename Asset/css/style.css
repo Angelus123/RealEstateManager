@@ -8,6 +8,11 @@
 /*----------------------------------------*/
 /*  CSS
 /*----------------------------------------*/
+@import './Contact.css';
+@import './ContactsGetIn.css';
+@import './LibraryProduct.css';
+@import './LibraryContent.css';
+@import './Services.css';
 @import './Dashboard.css';
 @import './NavigationItem.css';
 @import './NavigationItems.css';
@@ -15,7 +20,6 @@
 @import './Hero.css';
 @import './Clients.css';
 @import './Footer.css';
-@import './Services.css';
 @import './animate.css';
 @import './bootstrap.min.css';
 @import './Contacts.css';
@@ -94,6 +98,7 @@ ol {
 	padding: 0;
 	margin: 0;
 }
+
 .search-for-prop{
 	margin: 10px auto;
 	padding:10px;
