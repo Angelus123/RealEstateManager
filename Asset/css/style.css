@@ -362,6 +362,18 @@ padding:3px;
 	display: inline-block;
 }
 
+.site-ads {
+	background-image: url('../gallery/2.jpg');
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 300px;
+	margin: 10px;
+	background-color: rgb(251, 246, 246);
+	height: 50px;
+	display: inline-block;
+}
+
 .nav-switch {
 	display: none;
 }

@@ -16,7 +16,7 @@ const Contacts = () =>{
                
 					<div class="col-lg-12 text-lg-right header-top-right">
                     <div class="top-social">
-							<Link to="/dashboard"><h3>Dashboard</h3></Link>
+							<Link to="/dashboard"><b>Dashboard</b></Link>
 							<a href="#"> <i>Language</i></a>
 							<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
 							<a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
@@ -73,11 +73,8 @@ const Contacts = () =>{
 			</form>
   
         
-	
-		
-			
-			
-            <a href="#" class="site-ads"> <img src='/Asset/gallery/2.jpg' alt=""/></a>			
+
+            <a href="#" class="site-ads"> </a>			
 		</div>
 
 		
