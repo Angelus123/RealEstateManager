@@ -2,6 +2,8 @@
 <?php require "./hoc/head/head.php"; ?>
 <?php require "./hoc/foot/foot.php"; ?>
 <?php require "./Component/Page/LibraryPage/HeroLibrary/HeroLibrary.php"; ?>
+<?php require "./Component/LibraryContent/LibraryContent.php"; ?>
+<?php require "./Component/LibraryProduct/LibraryProduct.php"; ?>
 <?php require "./Component/Services/Services.php"; ?>
 <?php require "./Component/HomePage/Blog/Blog.php"; ?>
 <?php require "./Component/HomePage/Client/Client.php"; ?>
@@ -25,8 +27,9 @@
             return (
                 <React.Fragment>
                     <HeroLibrary />
-                    
-             
+                    <LibraryContent />
+                    <LibraryProduct />
+                    <Services />
                     <Footer />
                     <p> {this.state.datas} </p>
                 </React.Fragment>

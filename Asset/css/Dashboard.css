@@ -1,10 +1,11 @@
 .dash-left-container{
     position:fixed;
     width: 310px;
+    margin-top: 20px;
     height: 90vh;
     float:left;
     overflow: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
     cursor: pointer;
     background-color: rgb(211, 219, 250);
     z-index: 1;
@@ -26,11 +27,12 @@
 }
 
 .dash-content{
-    margin-top: 40px;
+    margin-top: 60px;
     margin-left: 300px;
 
 }
 .dash-izere{
+    margin-top: 20px;
     background-image: url('../img/service-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;

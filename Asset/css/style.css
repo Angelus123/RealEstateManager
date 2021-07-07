@@ -8,6 +8,10 @@
 /*----------------------------------------*/
 /*  CSS
 /*----------------------------------------*/
+@import './Contact.css';
+@import './ContactsGetIn.css';
+@import './LibraryProduct.css';
+@import './LibraryContent.css';
 @import './Services.css';
 @import './Dashboard.css';
 @import './NavigationItem.css';

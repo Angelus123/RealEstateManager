@@ -2,6 +2,7 @@
 <?php require "./hoc/head/head.php"; ?>
 <?php require "./hoc/foot/foot.php"; ?>
 <?php require "./Component/Page/ContactPage/HeroContact/HeroContact.php"; ?>
+<?php require "./Component/GetInTouch/GetInTouch.php"; ?>
 <?php require "./Component/Services/Services.php"; ?>
 <?php require "./Component/HomePage/Blog/Blog.php"; ?>
 <?php require "./Component/HomePage/Client/Client.php"; ?>
@@ -25,7 +26,7 @@
             return (
                 <React.Fragment>
                     <HeroContact />
-             
+                    <GetInTouch />
                     <Footer />
                     <p> {this.state.datas} </p>
                 </React.Fragment>

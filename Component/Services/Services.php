@@ -3,6 +3,7 @@
 <script  type="text/babel">
 const Services = () => (
    <div>
+    <h1 style={{textAlign:'center'}}>Our Services </h1>
    <div className="services-izere"> 
         <div className="services-item">
             <div className="services-item-image"></div>
