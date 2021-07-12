@@ -1,9 +1,28 @@
 <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script  type="text/babel">
+
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
 const Contacts = () =>{
 	const myRef = React.useRef(null)
+	const[redirect, setCount] = React.useState(null);
+
   const executeScroll = () => scrollToRef(myRef)
+
+
+
+ const onSignIn =(googleUser) => {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  setCount("/dashboard");
+  <Redirect to={redirect} />
+  
+  console.log('Email: ' + profile.getEmail());
+  
+  // This is null if the 'email' scope is not present.
+}
 	return(
 
     <div className='Contacts'>
@@ -16,7 +35,8 @@ const Contacts = () =>{
                
 					<div class="col-lg-12 text-lg-right header-top-right">
                     <div class="top-social">
-							<Link to="/dashboard"><b>Dashboard</b></Link>
+					<Link to="/dashboard"><b>Dashboard</b></Link>
+						
 							<a href="#"> <i>Language</i></a>
 							<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
 							<a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
@@ -29,6 +49,7 @@ const Contacts = () =>{
 							<li><Link to="/contact">CONTACT US</Link></li>
 							<li><Link to="/library">LIBRARY</Link></li>
 							<div ref={myRef}></div> 
+							<div class="g-signin2" data-onsuccess={onSignIn} ></div>
 							<button className="auto-scroll-top" onClick={executeScroll}>
 								Top
 							</button> 

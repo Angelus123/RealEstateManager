@@ -8,6 +8,7 @@
 /*----------------------------------------*/
 /*  CSS
 /*----------------------------------------*/
+@import './Products.css';
 @import './Contact.css';
 @import './ContactsGetIn.css';
 @import './LibraryProduct.css';
@@ -27,7 +28,7 @@
 @import './magnific-popup.css';
 @import './owl.carousel.css';
 @import './Contacts.css';
-@import 'material-icons/iconfont/material-icons.css';
+
 html,
 body {
 	height: 100%;
