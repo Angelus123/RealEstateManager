@@ -11,8 +11,9 @@
 <script  type="text/babel">
     class Dashboard extends React.Component {
         state={
-        manageProduct: false,
+        manageProduct: true,
         manageServices: false,
+        btnOpen:''
         }
     ManageProduct= () =>{
         const less=this.state.manageProduct
@@ -22,9 +23,9 @@
         })
         console.log(less);
         if(!less)
-            this.setState({btnOpen:'less'})  
+            this.setState({btnOpen:'white'})  
         else
-        this.setState({btnOpen:'more'})  
+        this.setState({btnOpen:''})  
     }
 
     ManageServices= () =>{
@@ -36,9 +37,9 @@
         })
         console.log(less);
         if(!less)
-            this.setState({btnOpen:'less'})  
+            this.setState({btnOpen:'white'})  
         else
-        this.setState({btnOpen:'more'})  
+        this.setState({btnOpen:''})  
     }
    signOut=() => {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -60,7 +61,7 @@
                         <Link to="/"  onclick={this.signOut}>Sign out</Link>
                         {this.state.manageProduct?
                     
-                    <ManageProducts />
+                    <ManageProducts  color={this.state.btnOpen}/>
                   
                    :null }
 
@@ -95,8 +96,6 @@
                     </div>
                    :null }
 
-                        <Blog />
-                        <Client />
                     </div>
                     
                     <Footer />

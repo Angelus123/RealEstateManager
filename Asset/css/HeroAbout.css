@@ -22,3 +22,12 @@
     color:rgb(202, 152, 152);
     padding:20px ;
 }
+@media (max-width:850px) {
+    .hero-about{
+     height: 200px;
+    }
+    .services-item{
+      width: 100%;
+
+    }
+}

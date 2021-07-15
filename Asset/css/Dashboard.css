@@ -11,6 +11,10 @@
     z-index: 1;
  
 }
+.products-manager{
+  margin: 50px;
+  padding:20px;
+}
 .dash-left-item{
     width: 250px;
     height: 60px;

@@ -11,7 +11,7 @@ const Blog = () => (
                     <h3>LATEST NEWS</h3>
                     <p>Real estate news headlines around Rwanda.</p>
                 </div>
-                <div class="row">
+                <div class="">
                     
             
                     <div class="col-lg-4 col-md-6 blog-item">

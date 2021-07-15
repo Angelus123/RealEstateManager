@@ -1,4 +1,5 @@
 <?php require './Component/UpdateProduct/UpdateProduct.php' ?>
+
 <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
 <script  type="text/babel">
 
@@ -55,20 +56,12 @@
 
             const row =this.state.products.map(product =>{
                         return (<tr>
-                        <td>{product.image}</td>
-                        <td>{product.ProductId}</td>
+                        <td><img src="./backend/product_crud/products/public/{product.image}" /></td>
                         <td>{product.title}</td>
-                        <td>{product.description}</td>
                         <td>{product.price}</td>
+                        <td>{product.description}</td>
                         <td>{product.create_date}</td>
-                        <td>
-                        <Link to ={'/updateproduct/'+ product.ProductId} key = {product.id}>
-                        <button  id={product.id} class="btn btn-sm btn-outline-primary">Edit</button>
-                       </Link>
-                       
-                        <button class="btn btn-sm btn-outline-danger" onClick={()=>this.deleteUser(product.create_date)}>Delete</button>
                         
-                    </td>
                     
                 </tr>)}
             )
@@ -78,17 +71,16 @@
         <h1>Products CRUD</h1>
 
         <p>
-            <Link to="/createproduct" type="button" class="btn btn-sm btn-success">Add Product</Link>
+            <a href="backend/product_crud/products/public/crud/create.php" type="button" class="btn btn-sm btn-success">Manage Products</a>
         </p>
         <table class="table">
             <thead>
             <tr>
                 <th scope="col">Image</th>
-                <th scope="col">ProductId</th>
-                <th scope="col">title</th>
+                <th scope="col">Title</th>
                 <th scope="col">Price</th>
-                <th scope="col">Create Date</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Description</th>
+                <th scope="col">Created Date</th>
             </tr>
             </thead>
             <tbody>

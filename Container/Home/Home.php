@@ -39,8 +39,7 @@
                 <React.Fragment>
                     <Hero />
                     <Services />
-                    <Blog />
-                    <Client />
+                
                     <Footer />
                     <p> {this.state.datas} </p>
                 </React.Fragment>
