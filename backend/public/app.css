@@ -1,0 +1,14 @@
+@import '../../Asset/css/style.css';
+@import '../../Asset/css/bootstrap.min.css';
+@import '../../Asset/css/Contacts.css';
+body {
+    padding: 50px;
+   
+}
+
+.product-img {
+    width: 50px;
+}
+.product-img-view {
+    width: 120px;
+}

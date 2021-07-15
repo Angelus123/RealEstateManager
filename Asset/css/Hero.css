@@ -1,26 +1,169 @@
+.container-hero{
+	margin: 40px;
+    background-color: rgba(255, 243, 243, 0.746);
+    margin-top: 150px;
+	width: 100%;
+	display: flex;
+    }
 
+    .hero-text {
+        width: 30%;
+        margin: 0 10px;
+        text-align: center;
+        box-shadow: 10px 10px 10px 10px rgba(128, 128, 128, 0.089);
+    }
+    
+    .hero-text h2 {
+    
+        margin-bottom: 14px;
+    }
+    
+    .hero-text p {
+        margin: 0 10px;
+        padding: 40px;
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
 
+/* hero image  css*/
 .hero-pic--1{
     background-image: url('../img/about.jpg');
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 250px;
+    margin-top: 10px;
     width:100%
-   
-}
+    }
+
 .hero-pic--3{
     background-image: url('../img/img1.jpg');
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 250px;
     width:100%
-}
+    }
 
 .hero-pic--2{
     background-image: url('../img/1.jpg');
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 250px;
     width:100%
+    }
    
-}
+    @media only screen and(max-width:850px) {
+        .container-hero{
+            margin: 20px;
+            background-color: rgba(255, 243, 243, 0.746);
+            margin-top: 10px;
+            width: 100%;
+            display: block;
+            }
+        
+            .hero-text {
+                width: 100%;
+                margin: 0 5px;
+                text-align: center;
+                box-shadow: 10px 10px 10px 10px rgba(128, 128, 128, 0.089);
+            }
+            
+            .hero-text h2 {
+            
+                margin-bottom: 14px;
+            }
+            
+            .hero-text p {
+                margin: 0 5px;
+                padding: 40px;
+                width: 500px;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        
+        /* hero image  css*/
+        .hero-pic--1{
+            background-image: url('../img/about.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100px;
+            margin-top: 5px;
+            width:100%
+            }
+        
+        .hero-pic--3{
+            background-image: url('../img/img1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100px;
+            margin-top: 5px;
+            width:100%
+            }
+        
+        .hero-pic--2{
+            background-image: url('../img/1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100px;
+            margin-top: 5px;
+            width:100%
+            }
+    }
+    @media (max-width:500px) {
+        .container-hero{
+            margin: 20px;
+            background-color: rgba(255, 243, 243, 0.746);
+            margin-top: 10px;
+            width: 100%;
+            display: block;
+            }
+        
+            .hero-text {
+                width: 80%;
+                margin: 0 5px;
+                text-align: center;
+                box-shadow: 10px 10px 10px 10px rgba(128, 128, 128, 0.089);
+            }
+            
+            .hero-text h2 {
+            
+                margin-bottom: 14px;
+            }
+            
+            
+            .hero-text p {
+                margin: 0 5px;
+                padding: 40px;
+                width: 100%;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            
+        
+        /* hero image  css*/
+        .hero-pic--1{
+            background-image: url('../img/about.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100px;
+            margin-top: 5px;
+            width:100%
+            }
+        
+        .hero-pic--3{
+            background-image: url('../img/img1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100px;
+            margin-top: 5px;
+            width:100%
+            }
+        
+        .hero-pic--2{
+            background-image: url('../img/1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100px;
+            margin-top: 5px;
+            width:100%
+            }
+    }

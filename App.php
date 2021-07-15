@@ -5,8 +5,10 @@
 <?php require "./Container/Library/Library.php"?>
 <?php require "./Container/Contact/Contact.php"?>
 <?php require "./Container/Dashboard/Dashboard.php" ?>
-<?php require "./hoc/head/head.php"; ?>
+
 <?php require "./Component/Navigation/Contacts/Contacts.php" ?>
+<?php require "./Component/CreateProduct/CreateProduct.php"?>
+
 
 <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
 <script  type="text/babel">
@@ -19,11 +21,7 @@ const App = () => (
 
   <ReactRouterDOM.HashRouter>
     <Contacts />
-    <ul style={{display:'flex'}}>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/login">Login</Link></li>
-      <li><Link to="/register">Register</Link></li>
-    </ul>
+  
 
 
     <Route path="/" exact component={home} />
@@ -31,6 +29,15 @@ const App = () => (
     <Route path="/contact"  component={contact} />
     <Route path="/library"  component={library} />
     <Route path="/dashboard"  component={dashboard} />
+    <Route path="/createproduct"  component={createproduct} />
+
+
+    <Route exact path="/updateproduct/:id" render={({ match }) => (
+       
+          <UpdateProduct id={match.params.id} />
+       
+    )} />
+
 
   </ReactRouterDOM.HashRouter>
 
@@ -44,4 +51,9 @@ const about= () => <div><About /></div>
 const contact= () => <div><Contact /></div>
 const library = () => <div><Library/></div>  
 const dashboard = () => <div><Dashboard/></div>  
+const createproduct = () => <div><CreateProduct/></div>  
+const updateproduct = () => <div><UpdateProduct/></div> 
+const login = () => <div><Login/></div>   
+
+
 </script>

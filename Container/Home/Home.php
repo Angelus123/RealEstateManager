@@ -11,24 +11,35 @@
     class Home extends React.Component {
         state = {
             datas:[]
-        }
-        componentDidMount() {
-            const url = '/api/backend/contacts.php'
-            axios.get(url).then(response => response.data)
-            .then((response) => {
-                console.log(this.state.datas)
-            this.setState({ datas: [response] })
-            console.log(this.state.datas)
-            })
-        }
+        }  
+        componentDidMount(){
+        axios.get('/api/backend/abaProducts.php')
+        .then(res => {
+            console.log('izere', res.data)
+  
+             const fetchOrders = [];
+             console.log( '------------',res.data)
+           for (let key in res.data ){
+              fetchOrders.push({
+                  ...res.data[key],
+                  id:key
+              })
+           }
+         
+    
+            this.setState({loading:false, orders:fetchOrders})
+        })
+        .catch (err => {
+            this.setState({loading:false})
+        })
+    }
         render() {
         console.log(this.state.datas)
             return (
                 <React.Fragment>
                     <Hero />
                     <Services />
-                    <Blog />
-                    <Client />
+                
                     <Footer />
                     <p> {this.state.datas} </p>
                 </React.Fragment>
