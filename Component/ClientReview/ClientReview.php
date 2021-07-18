@@ -2,8 +2,8 @@
 <script  type="text/babel">
 const ClientReview = () => (
     <div>
-        <div class="container">
-			<img class="mb-5" />
+        <div class="">
+			<img class="" />
 			<div class="row about-text">
 				<div class="col-xl-6 about-text-left">
 					<h5>ABOUT US</h5>
