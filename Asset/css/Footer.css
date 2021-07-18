@@ -1,24 +1,4 @@
 
-@media(min-width:500px){
-	.footer-product-izere{
-		background-image: url('../img/page-top-bg.jpg');
-		display: inline-block;
-	}
-	.footer-product-item{
-		margin: 30px;
-	
-	}
-	}
-@media(min-width:900px){
-.footer-product-izere{
-	background-image: url('../img/page-top-bg.jpg');
-	display: inline-block;
-}
-.footer-product-item{
-	margin: 30px;
-
-}
-}
 .footer-product-izere{
 	background-image: url('../img/page-top-bg.jpg');
 	display: flex;
@@ -28,4 +8,25 @@
 }
 .footer-title{
 	color: blanchedalmond;
+}
+
+@media(max-width:500px){
+	.footer-product-izere{
+		background-image: url('../img/b12.jpg');
+		display: block;
+	}
+	.footer-product-item{
+		margin: 30px;
+	
+	}
+	}
+@media(max-width:900px){
+.footer-product-izere{
+	background-image: url('../img/bg.jpg');
+	display: block;
+}
+.footer-product-item{
+	margin: 30px;
+
+}
 }
