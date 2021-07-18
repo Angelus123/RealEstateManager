@@ -53,7 +53,7 @@ const Footer = () => (
 								<input type="text" placeholder="Email address" />
 								<button><i class="fa fa-send"></i></button>
 							</form>
-							<Link to="/about"><h3 style={{color:green}}>CLIENT COMMENT AND REVIEW</h3></Link>
+							<Link to="/about"><h3 style={{color:'green'}}>CLIENT COMMENT AND REVIEW</h3></Link>
 				</div>
 				</div>
 			</div> 
