@@ -47,10 +47,12 @@
 }
 .site-adv p{
 	text-align: center;
+	padding: 0 20px;
+	color:white;
 	background: rgba(2, 0, 36, 0.116);
 	background: linear-gradient(90deg, rgba(36, 5, 0, 0.424) 0%, rgba(9, 9, 121, 0.205) 35%, rgba(0, 213, 255, 0.192) 100%);
 
-	margin-top:40px;
+	margin-top:10px;
 }
 .scroll{
     height:60vh;
@@ -94,5 +96,10 @@
 }
 body{
 	margin: 0;
+	background-color:re ;
 	padding: 0;
 }
+ .product-img {
+	 width: 200px;
+	 height:250px
+ }

@@ -1,11 +1,10 @@
-import React from 'react';
-import Logo from '../../Logo/Logo';
-import NavigationItems from '../NavigationItems/NavigationItems';
-import'./SideDrawer.css';
-import Backdrop from '../../UI/Backdrop/Backdrop';
-import Aux from '../../../hoc/Auxi/Auxilliary';
+<?php  require  '../NavigationItems/NavigationItems'?>
+<?php  require  '../../UI/Backdrop/Backdrop'?>
+<script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script  type="text/babel">
 
-const sideDrawer = ( props ) => {  
+const SideDrawer = ( props ) => {  
     let attachedClasses = ['SideDrawer', 'Close']
     if(props.open){
 
@@ -17,7 +16,7 @@ const sideDrawer = ( props ) => {
       <Backdrop show ={props.open} clicked= {props.closed} />  
             <div className = {attachedClasses.join(' ')}>
             <div style ={{marginLeft:'95%'}}onClick={props.closed}>X</div>
-                    <Logo height ="10%" />  
+                   
                     
                 <nav>
                     <NavigationItems />
@@ -27,5 +26,4 @@ const sideDrawer = ( props ) => {
         </Aux>
         }
     
-
-export default sideDrawer;
+</script>

@@ -50,13 +50,17 @@
             }
 
      
-                                    
+                         
                 
         render(){
-
+          
+            let backgound='https://cdn.pixabay.com/photo/2017/01/29/21/35/button-2019445_960_720.png'      
             const row =this.state.products.map(product =>{
+                backgound=`http:/localhost/api/backend/product_crud/products/public/${product.image}`
                         return (<tr>
-                        <td><img src="./backend/product_crud/products/public/{product.image}" /></td>
+                        <td >
+                
+                        <img src={backgound}/></td>
                         <td>{product.title}</td>
                         <td>{product.price}</td>
                         <td>{product.description}</td>

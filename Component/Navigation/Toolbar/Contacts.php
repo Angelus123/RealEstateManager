@@ -8,11 +8,37 @@ const Contacts = (props) =>{
 	const myRef = React.useRef(null)
 	const[redirect, setCount] = React.useState(null);
 	const[keywords, setKeywords] = React.useState("Search");
+	const[product, setProduct] = React.useState([]);
 
   const executeScroll = () => scrollToRef(myRef)
 
+        axios.get('/api/backend/manageProducts/abProducts.php')
+        .then(res => {
+            console.log('i', res.data)
+             const fetchProducts = [];
+             console.log( '',res.data)
+            for (let key in res.data ){
+              fetchProducts.push({
+                  ...res.data[key],
+                  id:key
+              })
+           }
+           console.log(fetchProducts)
+		  const newAdv= fetchProducts.slice(0, 1)
+		  console.log(newAdv)
+           setProduct(newAdv)
+            
+        })
+        .catch (err => {
+            console.log(err)
+        })
+		let advtext=product.map(item=>(
+			<p style={{color:'white'}}>{item.description}</p>
+
+		))
+
 const handleFormSubmit=( event )=> {
-        console.log('izere----',{keywords});
+        
 		
         event.preventDefault();
         let formData = new FormData();    //formdata object
@@ -84,9 +110,7 @@ const handleFormSubmit=( event )=> {
 		<div className="header-sub-top">
 			<div className="row-sub-top">
 				<Link to="/" class="site-logo"> </Link>
-				<div class="nav-switch">
-					<i class="fa fa-bars"></i>
-				</div>
+				
 				<form style={{textAlign:'center'}}  action="/api/backend/public/products/search.php" method="GET">
 					<div style={{display:'flex'}}>
 						<div className="nav-search">
@@ -155,12 +179,12 @@ const handleFormSubmit=( event )=> {
 						
 						<div className="nav-search-item">
 							<input type="submit" value="" />
-						</div>
-					
 					</div>
+					
+					</div>	
 				</form>
 
-				<Link to="#" > <div  className="site-adv"> <p>Here are the best House for you to buy or rent</p></div> </Link>			
+				<Link to="#" > <div  className="site-adv"> <p style={{color:'white'}}>{advtext}</p></div> </Link>			
 			</div>	
 		</div>
 	</div>

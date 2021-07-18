@@ -8,6 +8,12 @@
 /*----------------------------------------*/
 /*  CSS
 /*----------------------------------------*/
+@import './DrawerToggle.css';
+@import './Backdrop.css';
+@import './toolbar.css';
+@import './NavigationItemOne.css';
+@import './NavigationItemsOne.css';
+@import './SideDrawer.css';
 @import './Header.css';
 @import './Products.css';
 @import './Contact.css';
@@ -373,7 +379,7 @@ padding:3px;
 .main-menu {
 	margin-right: 0px;
 	float: right;
-	color:white;
+	color:rgb(0, 0, 0);
 	font-size: 12px;
 	list-style: none;
 }
@@ -1955,10 +1961,10 @@ padding:3px;
 		display: block;
 	}
 	.nav-switch {
-		position: absolute;
+		position: fixed;
 		right: 0;
 		font-size: 30px;
-		color: #fff;
+		color: rgb(12, 8, 8);
 		top: 0;
 		display: block;
 		cursor: pointer;
