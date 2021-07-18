@@ -11,6 +11,10 @@
     z-index: 1;
  
 }
+.dashpic{
+  background-color: red;
+  background-image:url('../../backend/product_crud/products/public/images/JDx3705d/aitel.png');
+}
 .products-manager{
   margin: 50px;
   padding:20px;

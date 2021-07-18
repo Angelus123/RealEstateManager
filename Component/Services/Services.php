@@ -2,9 +2,11 @@
 <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
 <script  type="text/babel">
 const Services = () => (
-   <div>
-    <h1 style={{textAlign:'center'}}>Our Services </h1>
-   <div className="services-izere"> 
+  <div className="izere-item">
+  <h1 style={{textAlign:'center'}}>Our Services </h1>
+  <div className="service-panel">
+ 
+
         <div className="services-item">
             <div className="services-item-image"></div>
             <div className="services-up">
@@ -31,11 +33,9 @@ const Services = () => (
             <p>Enjoy various services provided by us without any mid-man, Book your dream home today!.</p>
             <Link to ="/contact" ><div className="bottom"> Get Service</div></Link>
         </div> 
-   </div>
+        </div>
 
-
-
-   <div className="services-izere"> 
+        <div className="service-panel">
         <div className="services-item">
             <div className="services-item-image--3"></div>
             <div className="services-up">
@@ -54,7 +54,6 @@ const Services = () => (
             <p>Enjoy various services provided by us</p>
             <div className="bottom"> <Link to ="/contact" >Get Service</Link></div>
         </div>
-
         <div className="services-item">
             <div className="services-item-image--5"></div>
             <div className="services-up">DESIGN AND ICT</div>
@@ -62,10 +61,9 @@ const Services = () => (
             <p>Enjoy various services provided by us</p>
             <Link to ="/contact" ><div className="bottom"> Get Service</div></Link>
         </div> 
+        </div>
+   </div>
 
-       
-   </div>
-   </div>
    
    
 )

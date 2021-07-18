@@ -1,0 +1,2 @@
+<img src="../../product_crud/products/public/<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>" class="product-img">
+"../../product_crud/products/public/images/TR9RkSdV/Donate.png"

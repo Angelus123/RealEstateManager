@@ -2,11 +2,10 @@
 <?php require "./hoc/foot/foot.php"; ?>
 <?php require "./Container/Home/Home.php"; ?>
 <?php require "./Container/About/About.php"; ?>
+<?php require "./Container/Contact/Contact.php"; ?>
 <?php require "./Container/Library/Library.php"?>
-<?php require "./Container/Contact/Contact.php"?>
 <?php require "./Container/Dashboard/Dashboard.php" ?>
-
-<?php require "./Component/Navigation/Contacts/Contacts.php" ?>
+<?php require "./Component/Navigation/Toolbar/Layout.php" ?>
 <?php require "./Component/CreateProduct/CreateProduct.php"?>
 
 
@@ -20,7 +19,8 @@ const Route = ReactRouterDOM.Route;
 const App = () => (
 
   <ReactRouterDOM.HashRouter>
-    <Contacts />
+  
+    <Layout />
   
 
 

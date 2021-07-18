@@ -24,13 +24,13 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
         <ul class="navbar-nav">
         <li class="nav-item"><a href="http://localhost/api"><img src ="../../../Asset/img/logo1.png" alt ="logo" width="200px" height="50px"/></a></li>
             <li class="nav-item active">
-                <a class="nav-link" href="#"><?php echo $lang['home'] ?></a>
+                <a class="nav-link" href="http://localhost/api/#/home"><?php echo $lang['home'] ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><?php echo $lang['about'] ?></a>
+                <a class="nav-link" href="http://localhost/api/#/about"><?php echo $lang['about'] ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><?php echo $lang['contact'] ?></a>
+                <a class="nav-link" href="http://localhost/api/#/contact"><?php echo $lang['contact'] ?></a>
             </li>
             <li class="nav-link" >  
             <div id="google_translate_element"></div> 
@@ -76,7 +76,7 @@ function googleTranslateElementInit() {
                     
                     <img src="../../product_crud/products/public/<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>" class="product-img">
                 <?php endif; ?>
-                "../../product_crud/products/public/<?php echo $product['image'] ?>"
+               
             </td>
             <td><?php echo $product['title'] ?></td>
             <td><?php echo $product['price'] ?></td>

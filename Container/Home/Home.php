@@ -39,7 +39,6 @@
                 <React.Fragment>
                     <Hero />
                     <Services />
-                
                     <Footer />
                     <p> {this.state.datas} </p>
                 </React.Fragment>

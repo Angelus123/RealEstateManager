@@ -1,38 +1,88 @@
-.services-izere{
-  height: 450px;
-  width:100%;
-  display:flex;
-  background-color: rgb(227, 228, 228);
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin:60px auto;
-  margin-bottom:50px ;
+.izere-item{
+  width: 100%;
+  margin:10px auto;
+
   }
 
-
-  .services-item{
-    width: 30%;
-    background-color: rgb(255, 255, 255);
-    margin: 10px auto;
-    height: 500px;
-    border: 2px rgba(81, 81, 83, 0.13) solid;
-    border-radius: 6px;
- 
-  }
   
   .services-item-title{
-    border-radius: 8px;
+    /* border-radius: 8px;
     font-weight: 200;
     font-size: 12px;
     padding: 3px 15px;
     margin-left:40px;
     color: rgb(12, 8, 250);
     width: fit-content;
-    background-color: rgba(91, 166, 228, 0.212);
+    background-color: rgba(91, 166, 228, 0.212); */
   }
+  .service-panel{
+    margin:10px auto;
+    background-color: rgb(79, 82, 85);
+
+  }
+  .services-item{
+    display:inline-block; 
+    width: 100%;
+    background-color: rgb(239, 240, 240);
+    margin: 10px auto;
+    height: 500px;
+    border: 2px rgba(81, 81, 83, 0.13) solid;
+    border-radius: 6px;
+ 
+  }
+
+   
+
+
+
+
+@media (min-width:500px) {
+  .services-item{
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    margin: 0 20px;
+    margin-bottom:50px ;
+  }
+  .izere-item{
+    width: 100%;
+    margin:30px auto;
   
+    }
+ 
+ 
+}
+
+@media (min-width:650px) {
+  .services-item{
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    padding-top: 30px;
+    margin:0 10px;
+    margin-bottom:50px ;
+  }
+ 
+ 
+}
+  
+@media (min-width:850px) {
+  .services-item{
+    background-color: white;
+    width: 30%;
+    padding-top: 30px;
+    margin: 10px 30px;
+    margin-bottom:50px ;
+    
+  }
+
+  .service-panel{
+    margin:10px ;
+    display: flex;
+
+  }
+}
+ 
   .services-item p{
-    margin: 10px;
+    /* margin: 10px; */
   
   }
   .services-item-image--1{
@@ -125,20 +175,4 @@
       padding-top:20px;
       transition:all 0.1s;
     }
-    @media (max-width:850px) {
-      .services-izere{
-        background-color: red;
-        display: block;
-        margin-bottom:50px ;
-      }
-     
-  }
 
-@media (max-width: 500px){
-
-    .services-izere{
-      display: block;
-      margin-bottom:50px ;
-  
-      }
-}
