@@ -73,10 +73,7 @@
             <div className='products-manager'>
         
         <h1>Products CRUD</h1>
-
-        <p>
-            <a href="backend/product_crud/products/public/crud/create.php" type="button" class="btn btn-sm btn-success">Manage Products</a>
-        </p>
+            <a href="http://localhost/apitest/RealEstateManager/backend/product_crud/products/public/crud/create.php" > <div type="button" class="btn btn-sm btn-success">Manage Products</div></a>
         <table class="table">
             <thead>
             <tr>

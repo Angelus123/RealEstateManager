@@ -1,4 +1,4 @@
-
+<?php  require 'Slide.php'?>
 <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script  type="text/babel">
@@ -179,12 +179,12 @@ const handleFormSubmit=( event )=> {
 						
 						<div className="nav-search-item">
 							<input type="submit" value="" />
-					</div>
+						</div>
 					
 					</div>	
 				</form>
 
-				<Link to="#" > <div  className="site-adv"> <p style={{color:'white'}}>{advtext}</p></div> </Link>			
+				<Link to="#"> <div  className="site-adv"><Slide /></div> </Link>			
 			</div>	
 		</div>
 	</div>
