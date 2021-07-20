@@ -8,6 +8,8 @@
 /*----------------------------------------*/
 /*  CSS
 /*----------------------------------------*/
+@import './aboutus.css';
+@import './Slide.css';
 @import './DrawerToggle.css';
 @import './Backdrop.css';
 @import './toolbar.css';

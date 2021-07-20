@@ -33,7 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 <?php require_once '../../views/partials/header.php'; ?>
-<h1>Create new Product</h1>
+
+<h1 class="form-container">Create new Product</h1>
 
 <?php require_once '../../views/products/form.php' ?>
 

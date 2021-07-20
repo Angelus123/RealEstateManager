@@ -75,3 +75,65 @@
 .image-contact-holder{
   text-align: center;
 }
+.contact-container{
+  width: 100%;
+  margin:10px auto;
+  display: flex;
+
+
+}
+.contact-item{
+  margin: 0 30px;
+ width:45%;
+ display: inline-block;
+ box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.082);
+ font-size: 16px;
+}
+@media(max-width:500px){
+.contact-container{
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+
+}
+.contact-item{
+  margin: 0 4px;
+ width:90%;
+ display: block;
+ box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.082);
+ font-size: 16px;
+}
+}
+
+.ab-map{
+  width: 100%;
+  margin:30px auto;
+}
+* {
+  box-sizing: border-box;
+}
+iframe {
+  display: block;
+  width: 90%;
+  max-width: 60rem;
+  height: 25em;
+  margin: 2rem auto;
+  border: 1px solid black;
+}
+.ab-map h3, p {
+  text-align: center;
+  width: 90%;
+  max-width: 60rem;
+  margin: .5rem auto;
+
+}
+
+pre {
+  text-align: center;
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+  background: #eee;
+  padding: 2rem;
+  border: 1px solid #000;
+}

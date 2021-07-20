@@ -8,15 +8,8 @@ const DashLeft  = (props) => {
                 <div className='dash-left-container'> 
                     <div className="dash-left-item"  onClick={props.product}>Manage product</div>
                     <div className="dash-left-item" onClick={props.services}>Add Services </div>
-                    <div className="dash-left-item"  onClick={props.picture}> Manage picture</div>
-                    <div className="dash-left-item"> Manage news </div>
-                    <div className="dash-left-item"> Manage About us </div>
-                    <div className="dash-left-item"> Manage contact us </div>
-                    <div className="dash-left-item"> Manage Library </div>
-                    <div className="dash-left-item"> Manage Footer </div>
-                    
-                    
-                
+                    <div className="dash-left-item"  onClick={props.picture}> Manage Anouncement</div>
+                    <div className="dash-left-item"  onClick={props.about}> Manage About us </div>
                 </div>
         
             </div>

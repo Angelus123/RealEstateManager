@@ -1,0 +1,28 @@
+.about-container{
+    width:100%
+    
+
+}
+.review-item-container{
+    width: 60%;
+    margin: 10px auto;
+}
+.about-row{
+    display:flex;
+    width:95%;
+    margin:15px;
+    
+}
+.about-content{
+    padding:50px;
+}
+@media (max-width:500px){
+    .about-row{
+        display:block;
+        width:100%;
+        padding:5px;
+    }
+    .about-content{
+        padding:5px 0;
+    }
+}

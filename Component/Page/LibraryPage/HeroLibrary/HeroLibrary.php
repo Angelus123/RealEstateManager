@@ -6,7 +6,7 @@ class HeroLibrary extends React.Component {
             <div className='hero-about'> 
                 <div class="loader"></div>
                     <div style={{margin:"70px"}}>
-                        <h2>Library</h2>
+                        
                         <Link to="/"><b class="fa fa-home"></b>Home</Link>
                         <span><b class="fa fa-angle-right"></b>Libary </span>
                     </div>
