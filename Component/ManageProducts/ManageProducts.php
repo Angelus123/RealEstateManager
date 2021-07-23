@@ -11,16 +11,16 @@
         componentDidMount() {
         axios.get('/api/backend/manageProducts/abProducts.php')
         .then(res => {
-            console.log('i', res.data)
+        
              const fetchProducts = [];
-             console.log( '',res.data)
+          
             for (let key in res.data ){
               fetchProducts.push({
                   ...res.data[key],
                   id:key
               })
            }
-           console.log(fetchProducts)
+      
          
             this.setState({loading:false, products:fetchProducts})
         })
@@ -42,10 +42,10 @@
 
         axios.post(url, formData, config)
             .then(response => {
-                console.log(response);
+             
             })
             .catch(error => {
-                console.log(error);
+               
             });
             }
 
@@ -57,42 +57,39 @@
             let backgound='https://cdn.pixabay.com/photo/2017/01/29/21/35/button-2019445_960_720.png'      
             const row =this.state.products.map(product =>{
                 backgound=`http:/localhost/api/backend/product_crud/products/public/${product.image}`
-                        return (<tr>
-                        <td >
-                
-                        <img src={backgound}/></td>
-                        <td>{product.title}</td>
-                        <td>{product.price}</td>
-                        <td>{product.description}</td>
-                        <td>{product.create_date}</td>
-                        
-                    
-                </tr>)}
+                        return (
+                        <tr>
+                            <td >               
+                            <img src={backgound}/></td>
+                            <td>{product.title}</td>
+                            <td>{product.price}</td>
+                            <td>{product.description}</td>
+                            <td>{product.create_date}</td>      
+                        </tr>
+                        )}
             )
     return(
+        <div>
+ 
             <div className='products-manager'>
-        
-        <h1>Products CRUD</h1>
-            <a href="http://localhost/apitest/RealEstateManager/backend/product_crud/products/public/crud/create.php" > <div type="button" class="btn btn-sm btn-success">Manage Products</div></a>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Image</th>
-                <th scope="col">Title</th>
-                <th scope="col">Price</th>
-                <th scope="col">Description</th>
-                <th scope="col">Created Date</th>
-            </tr>
-            </thead>
-            <tbody>
-
-                {row}
-            
-            </tbody>
-        </table>
-
-
+                <h1>Products</h1>
+               
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Created Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {row}                   
+                    </tbody>
+                </table>
             </div>
+        </div>
 )
     }
 }
