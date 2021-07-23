@@ -1,4 +1,3 @@
-
 <?php require "./hoc/head/head.php"; ?>
 <?php require "./hoc/foot/foot.php"; ?>
 <?php require "./Component/HomePage/Hero/Hero.php"; ?>
@@ -12,14 +11,19 @@
     class Dashboard extends React.Component {
         state={
         manageProduct: true,
-        manageServices: false,
+        manageHome: false,
+        manageUrgent:false,
+        manageAbout: false,
+       
         btnOpen:''
         }
     ManageProduct= () =>{
         const less=this.state.manageProduct
         console.log(less)
         this.setState({manageProduct:!less,
-            manageServices:false
+            manageHome:false,
+            manageUrgent:false,
+            manageAbout: false,
         })
         console.log(less);
         if(!less)
@@ -28,12 +32,12 @@
         this.setState({btnOpen:''})  
     }
 
-    ManageServices= () =>{
-        const less=this.state.manageServices
-        console.log(less)
-        this.setState({manageServices:!less,
-            manageProduct: false,
-            
+    ManageHome= () =>{
+        const less=this.state.manageHome
+        this.setState({manageHome:!less,
+            manageProduct:false,
+            manageUrgent:false,
+            manageAbout: false,
         })
         console.log(less);
         if(!less)
@@ -41,61 +45,91 @@
         else
         this.setState({btnOpen:''})  
     }
-   signOut=() => {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
+    ManageUrgent= () =>{
+     
+        const less=this.state.manageUrgent
+        this.setState({manageUrgent:!less,
+            manageProduct:false,
+            manageHome:false,
+            manageAbout: false,
+        })
+        if(!less)
+            this.setState({btnOpen:'white'})  
+        else
+        this.setState({btnOpen:''})  
+    }
+    ManageAbout= () =>{
+        const less=this.state.manageAbout
+        this.setState({manageAbout:!less,
+            manageProduct:less,
+            manageHome:false,
+            manageUrgent: false,
+        })
+        if(!less)
+            this.setState({btnOpen:'white'})  
+        else
+        this.setState({btnOpen:''})  
+    }
 
-    
+ 
     render(){
         return( <React.Fragment>
                     <DashLeft
-                    services={this.ManageServices}
-                     product={this.ManageProduct}/>
+                    home={this.ManageHome}
+                    product={this.ManageProduct}
+                    urgent={this.ManageUrgent}
+                    about={this.ManageAbout}/>
+
                      
                     <div className="dash-content">
-                    
                         <DashRight />
-                        <Link to="/"  onclick={this.signOut}>Sign out</Link>
+                        
                         {this.state.manageProduct?
-                    
-                    <ManageProducts  color={this.state.btnOpen}/>
-                  
-                   :null }
-
-                   {this.state.manageServices?
-                    <div className="how-to-proceed-content-elig" >
-                       
-                        <div class="col-lg-6">
-                            <div class="contact-right">
-                            <h1>Manage Services</h1>
-                                <div class="section-title">
-                                    <h3>ADD NEW SERVICES</h3>
-                                   
-                                </div>
-                                <form class="contact-form">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <input type="text" placeholder="Enter Title" />
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" placeholder="Short Description" />
-                                        </div>
-                                        <div class="col-md-12">
-                                            <textarea  placeholder="Enter Full Description"></textarea>
-                                            <button class="site-btn">SUBMIT NOW</button>
-                                        </div>
-                                    </div>
+                            <div >
+                                <form action="/api/backend/product_crud/products/public/crud" class="contact-form">   
+                                    <button class="site-btn">MANAGE PRODUCT</button>         
                                 </form>
-                                <button><a href="../"> Manage Services in Database</a> </button>
+                                <ManageProducts />
+                                <button><a href="/api/backend/product_crud/products/public/crud/create.php">ADD PRODUCT NEW PRODUCT</a> </button>
                             </div>  
-                        </div>  
                      
-                    </div>
-                   :null }
+                    :null }
 
+                    {this.state.manageHome?
+                    <div>
+                    <div class="col-lg-6">
+                            <button><a href="/api/backend/product_crud/products/public/crud/create.php"> Manage Sales on Home Page</a> </button> 
+                        </div>
+
+                        <div class="col-lg-6">
+                            <button><a href="/api/backend/product_crud/products/public/crud/create.php"> Manage Rent on Home Page</a> </button>
+                        </div>  
+                        <div class="col-lg-6">
+                            <button><a href="/api/backend/product_crud/products/public/crud/create.php"> Manage Manage property on Home page</a> </button>
+                        </div>  
+                    </div>  
+                   
+                    :null }
+                    {this.state.manageUrgent?
+                    <div>
+                        <div class="col-lg-6">
+                            <button><a href="/apitest/RealEstateManager/backend/unews_crud/news/public/crud/create.php"> Manage Urgent News</a> </button> 
+                        </div>
+                    </div>  
+                   
+                    :null }
+                    {this.state.manageAbout?
+                    <div>
+                        <div class="col-lg-6">
+                            <button><a href="/api/backend/product_crud/products/public/crud/create.php"> Manage Client Comments</a> </button> 
+                        </div>
+
+                        <div class="col-lg-6">
+                            <button><a href="/api/backend/product_crud/products/public/crud/create.php"> Manage  About us</a> </button>
+                        </div>  
+
+                    </div>                    
+                    :null }
                     </div>
                     
                     <Footer />

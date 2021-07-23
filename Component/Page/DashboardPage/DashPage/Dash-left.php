@@ -7,8 +7,8 @@ const DashLeft  = (props) => {
             <div className='dash-left'> 
                 <div className='dash-left-container'> 
                     <div className="dash-left-item"  onClick={props.product}>Manage product</div>
-                    <div className="dash-left-item" onClick={props.services}>Add Services </div>
-                    <div className="dash-left-item"  onClick={props.picture}> Manage Anouncement</div>
+                    <div className="dash-left-item" onClick={props.home}>Manage Home Page </div>
+                    <div className="dash-left-item"  onClick={props.urgent}> Manage Urgent news</div>
                     <div className="dash-left-item"  onClick={props.about}> Manage About us </div>
                 </div>
         

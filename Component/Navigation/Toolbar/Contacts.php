@@ -14,23 +14,23 @@ const Contacts = (props) =>{
 
         axios.get('/api/backend/manageProducts/abProducts.php')
         .then(res => {
-            console.log('i', res.data)
+            // console.log('i', res.data)
              const fetchProducts = [];
-             console.log( '',res.data)
+            //  console.log( '',res.data)
             for (let key in res.data ){
               fetchProducts.push({
                   ...res.data[key],
                   id:key
               })
            }
-           console.log(fetchProducts)
+        //    console.log(fetchProducts)
 		  const newAdv= fetchProducts.slice(0, 1)
-		  console.log(newAdv)
+		//   console.log(newAdv)
            setProduct(newAdv)
             
         })
         .catch (err => {
-            console.log(err)
+            // console.log(err)
         })
 		let advtext=product.map(item=>(
 			<p style={{color:'white'}}>{item.description}</p>
@@ -44,7 +44,7 @@ const handleFormSubmit=( event )=> {
         let formData = new FormData();    //formdata object
         formData.append('keywords', {keywords})
        
-        console.log('dyd',formData)
+        // console.log('dyd',formData)
         axios({
             method: 'get',
             url: '/api/backend/manageProducts/search.php',
@@ -53,12 +53,12 @@ const handleFormSubmit=( event )=> {
         })
         .then(function (response) {
             //handle success
-            console.log(response)
+            // console.log(response)
 
         })
         .catch(function (err) {
             //handle error
-            console.log(err)
+            // console.log(err)
         });
     }
               
